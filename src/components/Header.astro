@@ -1,0 +1,60 @@
+---
+import HeaderLink from './HeaderLink.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<header>
+	<nav>
+		<div class="internal-links">
+			<HeaderLink href="#aboutUs">關於我們 <span class="en">About us</span></HeaderLink>
+			<HeaderLink href="#photo">照片 <span class="en">Photo</span></HeaderLink>
+			<HeaderLink href="#registration">報名 <span class="en">Registration</span></HeaderLink>
+		</div>	
+	</nav>
+</header>
+<style>
+	html {
+		scroll-behavior: smooth;
+	}
+	header {
+		margin: 0;
+		padding: 0 1em;
+		background: white;
+		box-shadow: 0 2px 8px rgba(var(--black), 5%);
+		height: 120px;
+		display: flex;
+		align-items: center;
+	}		
+	
+	nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		height: 100%;
+	}
+	.internal-links a {
+		padding: 1em 0.5em;
+		color: #f39800; /* Changed link color to gold */
+		border-bottom: 4px solid transparent;
+		text-decoration: none;
+		font-size: 1.0em;
+	}
+  .en {
+		font-size: 0.7em; /* 或 12px，看你要多小 */
+	}
+
+	nav a.active {
+		text-decoration: none;
+		border-bottom-color: var(--accent);
+	}
+	.social-links,
+	.social-links a {
+		display: flex;
+	}
+	@media (max-width: 720px) {
+		.social-links {
+			display: none;
+		}
+	}
+</style>

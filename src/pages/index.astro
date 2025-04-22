@@ -1,0 +1,916 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<!-- Font Awesome 6 (最新版本) -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+		<!-- Swiper CSS -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+		<!-- Swiper JS -->
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	</head>
+	<body>
+		<div class="hero">
+			<Header />
+			<div class="hero-content">
+				<img class="title-img" src="https://raw.githubusercontent.com/bosuntsao/my-wedding-images/dfa5d4c502bd974ae0dcf0b098c08f9682046f46/welcome.png" alt="封面標題1">
+				<img class="subtitle-img" src="https://raw.githubusercontent.com/bosuntsao/my-wedding-images/dfa5d4c502bd974ae0dcf0b098c08f9682046f46/to%20our%20wedding.png" alt="封面標題2">
+			</div>
+		</div>
+		<main>
+		<!-- <label>教會6/15 15:00</label><br>	 -->
+		
+		<div id="countdown" class="countdown-container">
+			<label class="countdown-title">婚禮倒數</label><br>
+			<label class="countdown-subtitle">距離婚禮還有</label><br>
+			<span id="days" class="countdown-time">00</span>日 
+			<span id="hours" class="countdown-time">00</span>時 
+			<span id="minutes" class="countdown-time">00</span>分 
+			<span id="seconds" class="countdown-time">00</span>秒
+		</div>
+			<section class="content-section" id="aboutUs">
+				<div class="about-us">
+					<img class="about-us-img" src="https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC07617.webp" alt="新郎新娘合照">
+					<div class="about-us-text">
+					<p>我們結婚了!</p>
+					<p>感謝耶穌牽起我們的手，使完全不同的我們慢慢磨合、一同成長。</p>
+					<p>在祂的愛裡，我們將一起踏上全新的旅程。</p>
+					<p>2025年6月15日，誠摯地邀請您一同見證上帝奇妙的恩典。</p>					
+					</div>
+				</div>
+				<div class="person-section">
+					<img class="groom-img" src="https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC07645.webp" alt="新郎">
+					<div class="person-text">
+						<p>率真又有行動力，對生活永遠充滿幹勁與熱情</p>
+						<p>做事認真、負責，總是樂於挑戰各種新事物！</p>
+						<p>健身是日常、不斷突破自己的極限！</p>
+						<p>開朗的他是大家的好朋友，</p>
+						<p>光是當伴郎就已經五次出場（戰績驚人）</p>
+						<p>在晨星團契，他是溫暖的副主席；</p>
+						<p>在她的生命裡，他是最可靠的戰友。</p>
+					</div>
+				</div>
+				<div class="name-box">
+            <h2>曹先生</h2>
+            <span class="theX">×</span>
+            <h2>鄧小姐</h2>
+        </div>
+				<div class="person-section reverse">
+					<div class="person-text">
+						<p>情感豐富、心裡內建一座劇場</p>
+						<p>不愛運動但超級愛吃，食物被搶走會落淚......</p>
+						<p>完美主義的她，對細節有點執著，</p>
+						<p>卻也用細膩的心，體貼著身邊每一個人。</p>
+						<p>她總是默默觀察、陪伴理解，</p>
+						<p>用溫暖填滿大家的世界。</p>
+						<p>在他的生命裡，她是最溫柔的依靠。</p>
+					</div>
+					<img class="bride-img" src="https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC07574.webp" alt="新娘">
+				</div>
+			</section>
+
+			<section id="photo">
+			
+			
+
+			<div id="customModal" class="custom-modal">
+				<div class="modal-content">
+					<span class="close" onclick="closeCustomModal()">&times;</span>
+					<img src="https://raw.githubusercontent.com/bosuntsao/my-wedding-images/main/DSC07655.webp" alt="婚紗照">
+					<img src="https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC07666.webp" alt="婚紗照">
+					<img class="left-column" src="https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC07802.webp" alt="婚紗照">
+					<img class="left-column" src="https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC08006.webp" alt="婚紗照">					
+					<img class="right-column" src="https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC08048.webp" alt="婚紗照">		
+					<img src="https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC07989.webp" alt="婚紗照">
+					<img src="https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC07900.webp" alt="婚紗照">					
+					<img src="https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC07891.webp" alt="婚紗照">
+					<img src="https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC07863.webp" alt="婚紗照">
+					<img src="https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC07851.webp" alt="婚紗照">
+					<img src="https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC07843.webp" alt="婚紗照">
+					<img src="https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC08070.webp" alt="婚紗照">
+					<img src="https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC08075.webp" alt="婚紗照">	
+					<img src="https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC08155.webp" alt="婚紗照">				
+					<img src="https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC08134.webp" alt="婚紗照">					
+					<img src="https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC08196.webp" alt="婚紗照">
+					<img src="https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC08276.webp" alt="婚紗照">
+					<img src="https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC08308.webp" alt="婚紗照">
+					
+				</div>
+			</div>
+			<div class="photo-row">
+					<button class="view-photo-btn" onclick="openCustomModal()">MORE <br>PHOTOS</button>
+				<div class="marquee-container">
+				
+					<div class="marquee-track">
+						<img src="https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC08006.webp" alt="婚紗照">
+						<img src="https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC08066.webp" alt="婚紗照">
+						<img src="https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC08075.webp" alt="婚紗照">
+						<img src="https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC07863.webp" alt="婚紗照">
+
+						<img src="https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC08006.webp" alt="婚紗照">
+						<img src="https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC08066.webp" alt="婚紗照">
+						<img src="https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC08075.webp" alt="婚紗照">
+						<img src="https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC07863.webp" alt="婚紗照">				
+					</div>				
+				</div>
+			</div>			
+			</section>
+			<section class="content-section" id="registration">
+			<div class="wedding-address">
+								<p>一同來見證~</p>
+                <h3>〈 證婚儀式 〉</h3>
+                <p>地址：116台北市文山區景中街36號 4F</p>
+								<p>日期：2025.06.15（日）</p>
+								<p>時間：下午2:30 開放入席 下午3:00 準時開始</p>
+								<p>地點：基督教貴格會合一堂(台北市文山區景中街36號4樓)</p>
+								<p style="font-size: 14px;">〈儀式精緻1小時，備有小點心及合影留念時間 ，教會證婚懇辭禮金〉</p>
+								<p>交通資訊：</p>
+								<p>捷運：捷運景美站2號出口 步行3分鐘</p>
+								<p>公車：景美國中站 步行1分鐘</p>
+								<p>週邊停車場：景華公園地下停車場</p>
+                <div class="map-container">
+                    <img 
+                        src="https://maps.googleapis.com/maps/api/staticmap?center=24.992522,121.543502&zoom=15&size=600x300&maptype=roadmap&markers=color:red%7C24.992522,121.543502&key=AIzaSyAf2Dzpz-_uhJLG0I3H-kgMQGYMKNpTw2g" 
+                        alt="婚禮地點地圖"
+                        class="map-image"
+                    />
+                    <a 
+                        href="https://maps.app.goo.gl/PT8dW1miCadjKGxU9" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        class="map-link"
+                    >
+                        <i class="fa-solid fa-location-dot"></i> 在 Google Maps 中開啟
+                    </a>
+                </div>
+            </div>
+            <div id="dinner-address" class="dinner-address" style="display:none;">	<!-- 晚宴地址 -->
+								<p>一同來慶祝~</p>
+							  <h3>〈 晚宴 〉</h3>
+                <p>時間：下午5:30 開放入席 下午6:00 準時開始</p>
+								<p>地點：新店彭園會館-E廳(新北市新店區北新路三段207之1號1樓)</p>
+								<p>交通資訊：</p>
+								<p>捷運：大坪林捷運站4號出口 步行3分鐘</p>
+								<p>公車：捷運大坪林站 步行3分鐘</p>
+								<p>開車：彭園備有地下停車場</p>
+									<div class="map-container">
+                    <img 
+                        src="https://maps.googleapis.com/maps/api/staticmap?center=231%E6%96%B0%E5%8C%97%E5%B8%82%E6%96%B0%E5%BA%97%E5%8D%80%E5%8C%97%E6%96%B0%E8%B7%AF%E4%B8%89%E6%AE%B5207%E4%B9%8B1%E8%99%9F1%E6%A8%93&zoom=18&scale=2&size=600x300&maptype=roadmap&format=png&key=AIzaSyAf2Dzpz-_uhJLG0I3H-kgMQGYMKNpTw2g" 
+                        alt="晚宴地點地圖"
+                        class="map-image"
+                    />
+                    <a 
+                        href="https://maps.app.goo.gl/esEDa29AT7R56qei6" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        class="map-link"
+                    >
+                        <i class="fa-solid fa-location-dot"></i> 在 Google Maps 中開啟
+                    </a>
+                </div>
+            </div>
+			<div class="wedding-address">
+			<h3>〈 線上參與 〉</h3>
+			<p>雖然無法見面，但誠摯地邀請您在線上一同分享問們的喜悅~！</p>
+			<p>直播連結：</p>
+			</div>
+			<form onsubmit="sent_redirect=true" target="iframe_redirect" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdPQqrdzj1Xt6FY-BlfZwmqYVDkaOl3eckLiOGCMyX1xCGiYA/formResponse" method="POST">
+				<h3>〈 出席表單 〉</h3>
+				<label>大名</label><br>
+				<input name="entry.1506917291" placeholder="name" required><br>
+				<label>電話</label><br>
+				<input name="entry.435843509" placeholder="phone number" required><br>
+				<label>郵件</label><br>
+				<input name="entry.450014766" placeholder="email"><br>
+				<label>關係</label><br>
+				<div class="relation-selection">
+						<div class="relation-option">
+								<input type="radio" name="entry.2009933179" value="男方友人" id="boyfriend_friend" class="hidden-radio" required/>
+								<label for="boyfriend_friend" class="relation-label">
+										<div class="m"></div>
+										<!-- <img src="https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC08048.webp" alt="男方朋友"> -->
+										<span>男方朋友</span>
+								</label>
+						</div>
+						<div class="relation-option">
+								<input type="radio" name="entry.2009933179" value="合一堂弟兄姊妹" id="church_member" class="hidden-radio" required/>
+								<label for="church_member" class="relation-label">
+										<div class="both"></div>
+										<!-- <img src="https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC08053.webp" alt="教會弟兄姊妹"> -->
+										<span>教會弟兄姊妹</span>
+								</label>
+						</div>
+						<div class="relation-option">
+								<input type="radio" name="entry.2009933179" value="女方友人" id="girlfriend_friend" class="hidden-radio" required/>
+								<label for="girlfriend_friend" class="relation-label">
+										<div class="w"></div>
+										<!-- <img src="https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC08048.webp" alt="女方朋友"> -->
+										<span>女方朋友</span>
+								</label>
+						</div>
+						
+				</div>
+				<label>婚禮出席</label><br>
+				<div class="wedding-selection">
+					<input type="radio" name="entry.57737297" value="我會出席" id="yes" class="hidden-radio" required/>
+					<label for="yes" class="gender-label"><span>我會出席</span></label>
+					<input type="radio" name="entry.57737297" value="無法出席，可參與線上直播" id="no" class="hidden-radio" />
+					<label for="no" class="gender-label"><span>無法出席，可參與線上直播</span></label>
+				</div>
+				<label>人數</label><br>
+				<input type="text" name="entry.2000157803" placeholder="1" required/><br>
+			
+				<div id="dinner-selection" class="dinner-selection" style="display:none;">	<!-- 晚宴部分 -->
+					<label>晚宴出席</label><br>
+					<div class="dinner-selection">
+					<input type="radio" name="entry.212034653" value="我會出席" id="dinner-yes" class="hidden-radio" required/>
+									<label for="dinner-yes" class="gender-label"><span>我會出席</span></label>
+					<input type="radio" name="entry.212034653" value="無法出席" id="dinner-no" class="hidden-radio" />
+									<label for="dinner-no" class="gender-label"><span>無法出席</span></label>
+					</div>
+					<label>人數(大)</label><br>
+					<input type="text" name="entry.900193384" placeholder="1" required/><br>
+					<label>人數(小)</label><br>
+					<input type="text" name="entry.280923903" placeholder="1" required/><br>
+					<label>備註</label>
+					<textarea name="entry.578669666" placeholder="其他需求請寫這e.g.吃素"></textarea><br>
+				</div><br>
+				
+				
+				<label>小餐盒</label><br>
+				<div class="lunchbox-selection">
+					<input type="radio" name="entry.122791003" value="我會拿喔" id="lunchbox-yes" class="hidden-radio" required/>
+									<label for="lunchbox-yes" class="gender-label"><span>我會拿喔</span></label>
+					<input type="radio" name="entry.122791003" value="不用謝謝!" id="lunchbox-no" class="hidden-radio" />
+									<label for="lunchbox-no" class="gender-label"><span>不用謝謝!</span></label>
+				</div>
+				<label>祝福語</label><br>
+				<textarea name="entry.754236464" placeholder="祝福的話"></textarea><br>
+
+				<div class="submit">
+				<button type="submit" name="button" value="submit">送出</button>
+				</div>
+			</form>	
+			
+			<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+			<p id="responseMessage"></p>
+			
+			</section>
+			
+
+			
+
+		</main>		
+
+		<button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+			<i class="fa-solid fa-arrow-up"></i>
+		</button>
+
+		<Footer />
+		<style>
+		
+			.hero {
+				height: 90vh;
+				width: 100%;				
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				background-image: url('https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC08006.webp');
+				background-size: contain;
+				background-position: calc(100% - 30px) calc(0% + 30px);;
+				background-repeat: no-repeat;
+				
+			}
+
+			.hero :global(header) {
+				background: transparent;
+				box-shadow: none;
+				position: relative;
+				z-index: 2;
+			}
+
+			.hero :global(header a) {
+				color: white;
+			}
+
+			.hero-content {
+				flex: 1;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				position: relative;
+				z-index: 2;
+				color: white;
+				text-align: center;
+				padding: 0 1rem;
+				max-width: none; /* 防止被限制 */
+			}		
+			.title-img {
+				position: absolute;
+				left: 5vw;
+				width: 53vw; /* 第一張圖片的寬度 */
+				height: auto;
+			}
+
+			.subtitle-img {
+				position: absolute;
+				top: 43vh;       /* 更往下 */
+				left: 24vw;
+				width: 38vw;
+				height: auto;
+			}
+			@media (max-width: 768px) {
+				.title-img {
+					width: 40vw;
+					top: 8vh;
+				}
+
+				.subtitle-img {
+					width: 50vw;
+					top: 20vh;
+				}
+			}
+			.about-us{
+				display: flex;
+				align-items: center;
+				gap: 20px;
+				padding: 20px;
+				max-width: 1400px;     /* ✅ 限制區塊最大寬度 */
+  			margin: 0 auto;        /* ✅ 置中整個區塊 */
+  			/* flex-wrap: wrap;       ✅ 小螢幕可自動換行 */
+			}
+			.about-us-img {				
+				width: 60%;
+				object-fit: cover;
+				border-radius: 8px;
+			}
+			.about-us-text{
+				max-width: 900px;
+				font-size: 18px;
+				color: #444;
+				line-height: 2;
+				text-align: justify;
+				text-indent: 2em;
+			}
+			.about-us-text p {
+				margin-bottom: 1.2em;
+			}
+
+			.person-section {
+				display: flex;
+				align-items: center;
+				gap: 40px;
+				margin: 40px 0;
+				padding: 20px;
+			}
+
+			.person-section.reverse {
+				flex-direction: row-reverse;
+			}
+
+			.person-section img {
+				width: 40%;
+				object-fit: cover;
+				border-radius: 8px;
+			}
+
+			.person-text {
+				flex: 1;
+				text-align: left;
+				font-size: 18px;
+				line-height: 1.8;
+			}
+
+			.person-section.reverse .person-text {
+				text-align: right;
+			}
+
+			.hero h1 {
+				font-size: 4rem;
+				margin: 0;
+				text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+			}
+
+			.subtitle {
+				font-size: 1.5rem;
+				margin-top: 1rem;
+				text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+			}
+			input,textarea {
+				border: 2px solid #FFD700 !important;
+				border-radius: 5px;
+				padding: 5px;
+				outline: none;
+				text-align: center;
+			}
+			
+			input:focus,textarea:focus {
+    		border-color: #FFC107; /* 變成較深的金黃色 */
+    		box-shadow: 0 0 5px rgba(255, 215, 0, 0.8); /* 增加金黃色光暈 */
+			}
+			input::placeholder, textarea::placeholder {
+    		color: rgba(0, 0, 0, 0.25); /* 調淡顏色（黑色 25% 透明度） */
+			}
+			.countdown-container { /* 婚禮倒數 */
+				font-family: 'Noto Serif SC', serif;				
+				text-align: center;	
+				color: #FFC107;
+			}
+			.countdown-title {
+				font-weight: bold;
+				font-size: 30px;
+    		line-height: 3.75;
+				letter-spacing: 0.3em;
+			}
+			.countdown-subtitle {
+			font-size: 18px;
+			letter-spacing: 0.4em;
+			line-height: 3.75;
+			}
+			.countdown-container span{
+				letter-spacing: 0.4em;
+				line-height: 4.75;
+			}
+			.countdown-time {
+				font-size: 30px; /* 放大字體 */
+				font-weight: bold;
+				margin-left: 30px; /* 左邊增加間距 */
+				text-align: center;
+			}
+			.name-box {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px; /* 間距可依需求調整 */
+}
+
+.name-box h2,
+.name-box .theX {
+  writing-mode: vertical-rl;     /* 垂直排版：從右往左 */
+  text-orientation: upright;     /* 保持文字直立 */	
+  font-size: 34px;
+  margin: 0;
+}
+.theX{
+	font-size: 25px;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+	padding:35px 0;
+  
+}
+
+			.content-section {
+				font-family: 'Noto Serif SC', serif;
+				font-weight: bold;
+				color: #FFC107;
+				font-size: 20px;
+    		line-height: 3.75;
+				letter-spacing: 0.3em;		
+				max-width: 720px;
+				margin: 0 auto;
+				padding: 2rem 1rem;
+				text-align: center;			
+			}
+			.photo-row {
+				width: 1100px;
+				display: flex;
+				align-items: baseline;  /* 使按鈕和跑馬燈底部對齊 */
+				gap: 50px; /* 按鈕和跑馬燈之間的距離 */
+			}
+						.view-photo-btn {
+				    min-width:110px;
+						min-height:110px;
+						line-height: 2;
+				background-color: transparent;  /* 背景透明 */
+				color: #FFC107;  /* 文字顏色 */
+				border: 1px solid #FFC107;  /* 邊框顏色 */
+				border-radius: 50px;  /* 圓角邊框 */
+				font-size: 16px;
+				cursor: pointer;
+				transition: transform 0.2s ease, box-shadow 0.2s ease;
+				text-align: center;  /* 文字居中 */
+			}
+			.view-photo-btn:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+			}
+			
+			.custom-modal {
+    display: none; /* 預設隱藏 */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: auto;
+		display: flex;
+  justify-content: center;
+		align-items: flex-start; /* 從上方彈出 */
+  padding-top: 0px; /* 控制離頂端距離 */
+  }
+
+  .modal-content {
+    margin: 5% auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 1000px;
+  }
+
+  .modal-content img {
+    width: 49%;
+    height: auto;
+		border-radius: 8px;
+  object-fit: cover;
+  }
+	.custom-modal {
+  	animation: fadeIn 0.1s ease-in-out;
+	}
+
+	@keyframes fadeIn {
+		from { opacity: 0; }
+		to { opacity: 1; }
+	}
+  .close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    cursor: pointer;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+			.m,.w,.both {
+				/* position: absolute; */
+				top: 0;
+				left: 0;
+				width: 80px;
+				height: 80px;
+				background-color: rgba(0, 0, 0, 0.3); /* 半透明黑色 */
+				border-radius: 8px;
+				z-index: 9999; /* 確保遮罩層在最上面 */
+				display: block; /* 預設顯示遮罩層 */
+				
+				transition: opacity 0.3s ease;
+					}
+					.m.hidden {
+				display: none; /* 點選後隱藏遮罩層 */
+			}
+			.relation-option {
+				position: relative; /* 確保遮罩層只覆蓋圖片區域 */
+			}
+			.relation-selection,.wedding-selection,.dinner-selection,.lunchbox-selection {
+				display: flex;
+				justify-content: center; /* 讓選項置中 */
+				align-items: center;
+				gap:10px; /* 設定選項間距 */
+			}
+			
+
+			.hidden-radio {
+            display: none; /* 隱藏 radio 按鈕 */
+        }
+
+			.relation-label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;            
+            cursor: pointer;
+        }
+			.relation-label .m  {
+            width: 200px;
+						height: 380px;
+						border-radius: 8px;
+						background-image: url('https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC08048.webp');
+						background-size: 200%;
+						background-position: 98% 50%;
+						background-repeat: no-repeat;
+	
+        }
+				.relation-label .w  {
+            width: 200px;
+						height: 380px;
+						border-radius: 8px;
+						background-image: url('https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC08048.webp');
+						background-size: 200%;
+						background-position: 6% 50%;
+						background-repeat: no-repeat;
+	
+        }
+
+				.relation-label .both  {
+            width: 200px;
+						height: 380px;
+						border-radius: 8px;
+						background-image: url('https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC08053.webp');
+						background-size: 130%;
+						background-position: 50% 50%;
+						background-repeat: no-repeat;
+	
+        }
+
+        .relation-label span {
+            margin-top: 5px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+			.relation-label:hover .overlay {
+				opacity: 1;
+				transform: scale(1.1);
+			}
+
+			.relation-label:hover img {
+				transform: scale(1.1);
+			}
+
+			/* 點擊後的亮度變化 */
+			.relation-label.active img {
+				filter: brightness(1.3);
+			}
+
+			.relation-label.active .overlay {
+				opacity: 0; /* 點擊後遮罩消失 */
+			}
+
+			.hidden-radio:checked + .gender-label .overlay {
+    		display: none;
+			}
+			.hidden-radio:checked + .gender-label {
+    		border: 2px solid #007bff;
+    		background-color: #e7f1ff;
+			}
+			button[type="submit"] {
+				background-color: transparent;
+				color: #FFC107;
+				padding: 12px 24px;
+				font-size: 16px;
+				border: 2px solid #FFC107;
+				border-radius: 18px;
+				cursor: pointer;
+				transition: background-color 0.3s ease-in-out;
+			}
+
+			button[type="submit"]:hover {
+				background-color: #FFC107; /* 滑鼠懸停變深色 */
+				color: #ffffff;
+			}
+			
+			/* 回到頂部按鈕樣式 */
+			.scroll-to-top {
+				position: fixed;
+				bottom: 20px;
+				right: 20px;
+				background-color: var(--accent);
+				color: white;
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				border: none;
+				cursor: pointer;
+				font-size: 20px;
+				box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+				opacity: 0;
+				transition: all 0.3s ease;
+				z-index: 1000;
+			}
+			
+			.scroll-to-top:hover {
+				background-color: var(--accent-dark);
+				transform: translateY(-2px);
+			}
+
+			.scroll-to-top.show {
+				opacity: 1;
+			}
+
+			.map-container {
+				margin: 1rem 0;
+				position: relative;
+				border-radius: 8px;
+				overflow: hidden;
+				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+			}
+
+			.map-image {
+				width: 100%;
+				height: auto;
+				display: block;
+				border-radius: 8px;
+			}
+
+			.map-link {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.5rem;
+				margin-top: 1rem;
+				padding: 0.5rem 1rem;
+				background-color: var(--accent);
+				color: white;
+				text-decoration: none;
+				border-radius: 4px;
+				transition: background-color 0.3s ease;
+			}
+
+			.map-link:hover {
+				background-color: var(--accent-dark);
+			}
+
+			.map-link i {
+				font-size: 1.2em;
+			}
+			.marquee-container {
+				width: 100vw;
+				overflow: hidden;
+				/* position: relative; */
+				height: 500px; /* 根據圖片高度調整 */
+				
+			}
+
+			.marquee-track {
+				display: flex;
+				width: max-content;
+				animation: scroll-marquee 40s linear infinite;
+			}
+
+			.marquee-track img {
+				width: 500px;
+				height: 600px;
+				margin-right: 20px;
+				border-radius: 0px;
+				object-fit: cover;
+			}
+			.wedding-address,.dinner-address{
+				font-family: 'Noto Serif SC', serif;
+				font-weight: bold;
+				color: #FFC107;
+				padding-top:40px;
+				text-align: center;
+			}
+			.wedding-address p,.dinner-address p{
+				font-size:18px;
+				color: #3b3b3b;
+			}
+			
+			@keyframes scroll-marquee {
+				0% {
+					transform: translateX(0);
+				}
+				100% {
+					transform: translateX(-50%);
+				}
+			}
+
+			@media (max-width: 768px) {
+				.hero h1 {
+					font-size: 2.5rem;
+				}
+
+				.subtitle {
+					font-size: 1.2rem;
+					color: rgba(255, 255, 255, 0.8);
+				}
+
+				.swiper {
+					height: 50vh;
+				}
+
+				.person-section, .person-section.reverse {
+					flex-direction: column;
+					text-align: center;
+					gap: 20px;
+				}
+
+				.person-section img {
+					width: 80%;
+					margin: 0 auto;
+				}
+
+				.person-text {
+					text-align: center !important;
+				}
+			}
+		</style>
+
+		<script>
+			document.querySelectorAll(".relation-label").forEach(label => {
+				label.addEventListener("click", function () {
+					// 移除其他已選擇的 active 狀態
+					document.querySelectorAll(".relation-label").forEach(item => item.classList.remove("active"));
+
+					// 為當前選擇的標籤添加 active 樣式
+					this.classList.add("active");
+				});
+			});
+
+			// TOP滾動事件
+			window.addEventListener('scroll', () => {
+				const scrollButton = document.getElementById('scrollToTop');
+				if (window.scrollY > 500) {
+					scrollButton.classList.add('show');
+				} else {
+					scrollButton.classList.remove('show');
+				}
+			});
+			// TOP點擊回到頂部
+			document.getElementById('scrollToTop').addEventListener('click', () => {
+				window.scrollTo({
+					top: 0,
+					behavior: 'smooth'
+				});
+			});
+			// 目標日期
+        const targetDate = new Date("2025-06-15T15:00:00");
+			// 倒數計時元素
+			const countdownElement = document.getElementById('countdown');
+			const daysElement = document.getElementById('days');
+			const hoursElement = document.getElementById('hours');
+			const minutesElement = document.getElementById('minutes');
+			const secondsElement = document.getElementById('seconds');
+			// 更新計時
+        function updateCountdown() {
+            const now = new Date();
+            const timeLeft = targetDate - now;
+            if (timeLeft <= 0) {
+                countdownElement.innerHTML = "倒计时结束！";
+                clearInterval(countdownInterval); // 停止倒计时更新
+            } else {
+                // 计算天、小时、分钟、秒
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+                // 显示倒计时
+                daysElement.textContent = String(days).padStart(2, "0");
+                hoursElement.textContent = String(hours).padStart(2, "0");
+                minutesElement.textContent = String(minutes).padStart(2, "0");
+                secondsElement.textContent = String(seconds).padStart(2, "0");
+            }
+        }
+        const countdownInterval = setInterval(updateCountdown, 1000);
+
+				// 偵測URL中的查詢參數
+				const urlParams = new URLSearchParams(window.location.search);
+				console.log(urlParams);
+				// 檢查是否有 "dinner" 參數且值為 "yes"
+				if (urlParams.get('dinner') === 'yes') {
+					// 顯示晚宴選項
+					console.log("Y");
+					document.getElementById('dinner-selection').style.display = 'block';
+					document.getElementById('dinner-address').style.display = 'block';
+				} else {
+					// 隱藏晚宴選項（對於普通賓客，預設隱藏）
+					console.log("N");
+					document.getElementById('dinner-selection').style.display = 'none';
+					document.getElementById('dinner-address').style.display = 'none';
+				}
+
+				// Initialize Swiper
+				document.addEventListener('DOMContentLoaded', function() {
+					const swiper = new Swiper(".mySwiper", {
+						effect: "fade",
+						loop: true,
+						autoplay: {
+							delay: 3000,
+							disableOnInteraction: false,
+						},
+						speed: 1000,
+					});
+				});
+
+				window.onload = function() {
+					// 打開模態框
+					window.openCustomModal = function() {
+						document.getElementById("customModal").style.display = "block";
+					}
+
+					// 關閉模態框
+					window.closeCustomModal = function() {
+						document.getElementById("customModal").style.display = "none";
+					}
+				};
+		</script>		
+	</body>
+</html>
