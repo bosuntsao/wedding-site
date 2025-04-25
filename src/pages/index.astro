@@ -16,6 +16,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 		<!-- Swiper JS -->
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 	<body>
 		<div class="hero">
@@ -144,7 +145,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 						<p>日期：2025.06.15（日）</p>
 						<p>時間：下午2:30 開放入席 下午3:00 準時開始</p>
 						<p>地點：基督教貴格會合一堂(台北市文山區景中街36號4樓)</p>
-						<p style="font-size: 14px;">〈儀式精緻1小時，備有小點心及合影留念時間 ，教會證婚懇辭禮金〉</p>
+						<p class="wedding-note">〈儀式精緻1小時，備有小點心及合影留念時間 ，教會證婚懇辭禮金〉</p>
 					</div>                
 					<div class="traffic-information">
 					<p>交通資訊：</p>
@@ -198,20 +199,20 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				<div class="sheet">
 					<h3>〈 出席表單 〉</h3>
 				</div>
-				<label>大名</label><br>
-				<input name="entry.1506917291" placeholder="name" required><br>
-				<label>電話</label><br>
-				<input name="entry.435843509" placeholder="phone number" required><br>
-				<label>郵件</label><br>
+				<label>大名：</label>
+				<input name="entry.1506917291" placeholder="ＯＯＯ" required><br>
+				<label>電話：</label>
+				<input name="entry.435843509" placeholder="09-12345678" required><br>
+				<label>郵件：</label>
 				<input name="entry.450014766" placeholder="email"><br>
-				<label>關係</label><br>
+				<label>您的身份是：</label><br>
 				<div class="relation-selection">
 						<div class="relation-option">
 								<input type="radio" name="entry.2009933179" value="男方友人" id="boyfriend_friend" class="hidden-radio" required/>
 								<label for="boyfriend_friend" class="relation-label">
 										<div class="m"></div>
 										<!-- <img src="https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC08048.webp" alt="男方朋友"> -->
-										<span>男方朋友</span>
+										<span>男方親友</span>
 								</label>
 						</div>
 						<div class="relation-option">
@@ -219,7 +220,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 								<label for="church_member" class="relation-label">
 										<div class="both"></div>
 										<!-- <img src="https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC08053.webp" alt="教會弟兄姊妹"> -->
-										<span>教會弟兄姊妹</span>
+										<span>教會友人</span>
 								</label>
 						</div>
 						<div class="relation-option">
@@ -227,7 +228,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 								<label for="girlfriend_friend" class="relation-label">
 										<div class="w"></div>
 										<!-- <img src="https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC08048.webp" alt="女方朋友"> -->
-										<span>女方朋友</span>
+										<span>女方親友</span>
 								</label>
 						</div>
 						
@@ -236,10 +237,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				<div class="wedding-selection">
 					<input type="radio" name="entry.57737297" value="我會出席" id="yes" class="hidden-radio" required/>
 					<label for="yes" class="gender-label"><span>我會出席</span></label>
-					<input type="radio" name="entry.57737297" value="無法出席，可參與線上直播" id="no" class="hidden-radio" />
-					<label for="no" class="gender-label"><span>無法出席，可參與線上直播</span></label>
+					<input type="radio" name="entry.57737297" value="無法出席" id="no" class="hidden-radio" />
+					<label for="no" class="gender-label"><span>無法出席</span></label>
 				</div>
-				<label>人數</label><br>
+				<label>人數：</label>
 				<input type="text" name="entry.2000157803" placeholder="1" required/><br>
 			
 				<div id="dinner-selection" class="dinner-selection" style="display:none;">	<!-- 晚宴部分 -->
@@ -256,17 +257,17 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 					<input type="text" name="entry.280923903" placeholder="1" /><br>
 					<label>備註</label>
 					<textarea name="entry.578669666" placeholder="其他需求請寫這e.g.吃素"></textarea><br>
-				</div><br>
+				</div>
 				
 				
-				<label>小餐盒</label><br>
+				<!-- <label>小餐盒</label><br>
 				<div class="lunchbox-selection">
 					<input type="radio" name="entry.122791003" value="我會拿喔" id="lunchbox-yes" class="hidden-radio" required/>
 									<label for="lunchbox-yes" class="gender-label"><span>我會拿喔</span></label>
 					<input type="radio" name="entry.122791003" value="不用謝謝!" id="lunchbox-no" class="hidden-radio" />
 									<label for="lunchbox-no" class="gender-label"><span>不用謝謝!</span></label>
-				</div>
-				<label>想對我們說的話</label><br>
+				</div>-->
+				<label>想對我們說的話：</label><br>
 				<textarea name="entry.754236464" placeholder="想對我們說的話~"></textarea><br>
 
 				<div class="submit">
@@ -275,7 +276,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			</form>	
 			<div class="wedding-address">
 			<h3>〈 線上參與 〉</h3>
-			<p>雖然無法見面，但誠摯地邀請您在線上一同分享問們的喜悅~！</p>
+			<p>雖然無法見面，但誠摯地邀請您在線上一同分享我們的喜悅~！</p>
 			<p>直播連結：</p>
 			</div>
 			
@@ -295,7 +296,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 		<Footer />
 		<style>
-			
+			body {
+				overflow-x: hidden;
+			}
 			.hero {
 				height: 90vh;
 				width: 100%;				
@@ -331,7 +334,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				color: white;
 				text-align: center;
 				padding: 0 1rem;
-				max-width: none; /* 防止被限制 */
+				max-width: 100%; /* 防止被限制 */
+				overflow: hidden;
 			}	
 				
 			.title-img {
@@ -349,14 +353,39 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				height: auto;
 			}
 			@media (max-width: 768px) {
+				.hero {
+						height: 40vh;
+						background-position: center top;
+						background-image: url('https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC08006.webp');
+						background-size: contain;
+						background-position: calc(100% - 0px) calc(0% + 50px);;
+						background-repeat: no-repeat;
+					}
+
+				.hero-content {							
+					text-align: center;					
+				}
+
+				.hero-content h1 {
+					font-size: 1.8rem; /* 手機字體縮小 */
+					line-height: 1.4;
+				}
+
+				.hero-content p {
+					font-size: 1rem;
+					line-height: 1.6;
+				}
+
 				.title-img {
-					width: 40vw;
-					top: 8vh;
+					width: 60vw;
+					top: 6vh;
 				}
 
 				.subtitle-img {
+					position:relative;
 					width: 50vw;
-					top: 20vh;
+					top: 0vh;
+					right:98vw;
 				}
 			}
 			.main-container {
@@ -394,11 +423,19 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				margin: 0 auto; /* 置中整個區塊 */
 				flex-wrap: wrap; /* 小螢幕可自動換行 */  				
 			}
+			
 			@media (max-width: 768px) {
 			.about-us {
-				flex-direction: column;
+				padding-bottom:40px;
 			}
+			.about-us-img,
+			.about-us-text {
+				width: 100%;
+				max-width: 100%;
+				}
 			}
+				
+			
 			.about-us-img {				
 				width: 60%;
 				object-fit: cover;
@@ -411,15 +448,15 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				line-height: 2;
 				text-align: justify;
 				text-indent: 2em;
+			}			
+			.about-us-text p {
+				font-size:15px;
+				margin-bottom: 1.2em;
+				letter-spacing: 0.5em;
 			}
 			.about-us-textmain p{
 				font-size:30px;
 			}
-			.about-us-text p {
-				margin-bottom: 1.2em;
-				letter-spacing: 0.5em;
-			}
-
 			.person-section {
 				display: flex;
 				align-items: center;
@@ -448,6 +485,20 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			.person-section.reverse .person-text {
 				text-align: left;
 			}
+			@media (max-width: 768px) {
+			.person-section,
+			.person-section.reverse {
+				flex-direction: column;
+				text-align: center;
+			}
+
+			.person-text {
+				text-align: justify;
+				width: 100%;
+				max-width: 100%;
+			}
+			}
+
 			.image-frame {
 				width: 300px;             
 				height: 450px;           
@@ -489,6 +540,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				outline: none;
 				text-align: center;
 			}
+			textarea {
+				height:200px;
+			}
 			
 			input:focus,textarea:focus {
     		border-color: #FFC107; /* 變成較深的金黃色 */
@@ -496,6 +550,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			}
 			input::placeholder, textarea::placeholder {
     		color: rgba(0, 0, 0, 0.25); /* 調淡顏色（黑色 25% 透明度） */
+			
+			}
+			textarea::placeholder {
+				text-align: left;
 			}
 			.countdown-container { /* 婚禮倒數 */
 				padding-top:80px;
@@ -525,6 +583,37 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				margin-left: 30px; /* 左邊增加間距 */
 				text-align: center;
 			}
+
+			@media (max-width: 768px) {
+			.countdown-container {
+				padding-top: 40px;
+				padding-bottom: 120px;
+			}
+
+			.countdown-title {
+				font-size: 22px;
+				line-height: 3.7;
+				letter-spacing: 0.15em;
+			}
+
+			.countdown-subtitle {
+				font-size: 16px;
+				line-height: 4.9;
+				letter-spacing: 0.2em;
+			}
+
+			.countdown-container span {
+				font-size: 16px;
+				line-height: 3;
+				letter-spacing: 0.2em;
+			}
+
+			.countdown-time {
+				font-size: 24px;
+				margin-left: 10px;
+			}
+			}
+
 			.name-box {
 			display: flex;
 			justify-content: center;
@@ -550,10 +639,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 			
 			.photo-row {
-				width: 1300px;
+				width: 100vw;				
 				display: flex;
 				align-items: baseline;  /* 使按鈕和跑馬燈底部對齊 */
 				gap: 50px; /* 按鈕和跑馬燈之間的距離 */
+				box-sizing: border-box;
 			}
 			.view-photo-btn {
 				min-width:110px;
@@ -572,61 +662,68 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				transform: translateY(-2px);
 				box-shadow: 0 6px 14px rgba(0,0,0,0.15);
 			}
-			
+			@media (max-width: 768px) {
+				.photo-row {
+					gap: 26px;
+				}
+				.view-photo-btn{
+					margin: 0 22px;
+				}
+			}
 			.custom-modal {
-    display: none; /* 預設隱藏 */
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    overflow: auto;		
-  justify-content: center;
-		align-items: flex-start; /* 從上方彈出 */
-  padding-top: 0px; /* 控制離頂端距離 */
-  }
+				display: none; /* 預設隱藏 */
+				position: fixed;
+				z-index: 1000;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.8);
+				overflow: auto;		
+			justify-content: center;
+					align-items: flex-start; /* 從上方彈出 */
+			padding-top: 0px; /* 控制離頂端距離 */
+			}
 
-  .modal-content {
-    margin: 5% auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 1000px;
-  }
+			.modal-content {
+				margin: 5% auto;
+				padding: 20px;
+				background-color: white;
+				border-radius: 10px;
+				width: 90%;
+				max-width: 1000px;
+			}
 
-  .modal-content img {
-    width: 49%;
-    height: auto;
-		border-radius: 8px;
-  object-fit: cover;
-  }
-	.custom-modal {
-  	animation: fadeIn 0.1s ease-in-out;
-	}
+			.modal-content img {
+				width: 49%;
+				height: auto;
+					border-radius: 8px;
+			object-fit: cover;
+			}
+				.custom-modal {
+				animation: fadeIn 0.1s ease-in-out;
+				}
 
-	@keyframes fadeIn {
-		from { opacity: 0; }
-		to { opacity: 1; }
-	}
-  .close {
-    color: #aaa;
-    font-size: 28px;
-    font-weight: bold;
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    cursor: pointer;
-  }
+				@keyframes fadeIn {
+					from { opacity: 0; }
+					to { opacity: 1; }
+				}
+			.close {
+				color: #aaa;
+				font-size: 28px;
+				font-weight: bold;
+				position: absolute;
+				top: 10px;
+				right: 25px;
+				cursor: pointer;
+			}
 
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
+			.close:hover,
+			.close:focus {
+				color: black;
+				text-decoration: none;
+				cursor: pointer;
+			}
 
 
 			.m,.w,.both {
@@ -645,14 +742,26 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 					.m.hidden {
 				display: none; /* 點選後隱藏遮罩層 */
 			}
-			.relation-option {
-				position: relative; /* 確保遮罩層只覆蓋圖片區域 */
-			}
-			.relation-selection,.wedding-selection,.dinner-selection,.lunchbox-selection {
+			
+			.relation-selection,.wedding-selection {
 				display: flex;
 				justify-content: center; /* 讓選項置中 */
-				align-items: center;
-				gap:10px; /* 設定選項間距 */
+				align-items: center;				
+			}
+			.relation-selection{
+				gap:30px;
+			}
+			.wedding-selection{
+				font-size:16px;
+				gap:60px;
+			}
+			input[type="radio"]:checked + label {
+				border: 2px solid #FFC107 !important;
+				background-color: transparent;
+				color: inherit; 
+				border-radius: 15px;
+				padding: 4px;
+				transition: all 0.3s ease; 
 			}
 			
 
@@ -670,36 +779,75 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
         }
 			.relation-label .m  {
             width: 200px;
-						height: 380px;
-						border-radius: 8px;
-						background-image: url('https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC08048.webp');
-						background-size: 200%;
-						background-position: 98% 50%;
-						background-repeat: no-repeat;
+			height: 380px;
+			border-radius: 8px;
+			background-image: url('https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC08048.webp');
+			background-size: 200%;
+			background-position: 98% 50%;
+			background-repeat: no-repeat;
 	
         }
-				.relation-label .w  {
+			.relation-label .w  {
             width: 200px;
-						height: 380px;
-						border-radius: 8px;
-						background-image: url('https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC08048.webp');
-						background-size: 200%;
-						background-position: 6% 50%;
-						background-repeat: no-repeat;
+			height: 380px;
+			border-radius: 8px;
+			background-image: url('https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC08048.webp');
+			background-size: 200%;
+			background-position: 6% 50%;
+			background-repeat: no-repeat;
 	
         }
 
 				.relation-label .both  {
             width: 200px;
-						height: 380px;
-						border-radius: 8px;
-						background-image: url('https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC08053.webp');
-						background-size: 130%;
-						background-position: 50% 50%;
-						background-repeat: no-repeat;
+			height: 380px;
+			border-radius: 8px;
+			background-image: url('https://raw.githubusercontent.com/bosuntsao/my-wedding-images/refs/heads/main/DSC08053.webp');
+			background-size: 130%;
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
 	
         }
 
+		@media (max-width: 768px) {
+			.relation-selection{
+				gap: 26px;
+			}
+			.relation-label {
+			flex-direction: column;
+			align-items: center;
+			width: 100%;			
+			}
+
+			.relation-label .m,
+			.relation-label .w,
+			.relation-label .both {
+				width: 120%;
+				max-width: 300px;
+				height: auto;
+				aspect-ratio: 2 / 3; /* 控制比例 */
+				background-size: cover;
+			background-position: center;
+			
+				
+			}
+			.relation-label .m {
+				width: 120%;
+				background-size: 200%;
+				background-position:98% 50%;
+			}
+
+			.relation-label .w {
+				width: 120%;
+				background-size: 200%;
+				background-position: 6% 50%;
+			}
+
+			.relation-label .both {
+				background-size: cover;
+				background-position: center;
+			}
+		}
         .relation-label span {
             margin-top: 5px;
             font-size: 16px;
@@ -712,24 +860,15 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			}
 
 			.relation-label:hover img {
-				transform: scale(1.1);
+				transform: scale(1.5);
 			}
 
-			/* 點擊後的亮度變化 */
-			.relation-label.active img {
-				filter: brightness(1.3);
-			}
-
-			.relation-label.active .overlay {
-				opacity: 0; /* 點擊後遮罩消失 */
-			}
-
+			
 			.hidden-radio:checked + .gender-label .overlay {
     		display: none;
 			}
 			.hidden-radio:checked + .gender-label {
     		border: 2px solid #007bff;
-    		background-color: #e7f1ff;
 			}
 			button[type="submit"] {
 				background-color: transparent;
@@ -812,11 +951,29 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			.map-link i {
 				font-size: 1.2em;
 			}
+			@media (max-width: 768px) {
+				.map-container {
+				padding-bottom:18px;				
+				}			
+				.map-link {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.9rem;
+				margin-top: 1rem;				
+				padding: 0.4rem 1rem;
+				background-color: var(--accent);
+				color: white;
+				text-decoration: none;
+				font-size: 0.7em;
+				border-radius: 14px;
+				}
+			}
 			.marquee-container {
-				width: 1000px; /* ✅ 改為固定寬度，不要 100vw */
-				margin-left: auto; /* ✅ 靠右 */
-				overflow: hidden;
 				height: 500px;
+				width: 100vw;
+				margin-left: auto;
+				overflow: hidden;
+				
 			}
 
 			.marquee-track {
@@ -837,8 +994,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				font-weight: bold;
 				color: #FFC107;
 				padding-top:40px;
-				padding-bottom:140px;
-				
+				padding-bottom:140px;				
 			}
 			.wedding-address p,.dinner-address p{
 				font-size:18px;
@@ -858,11 +1014,57 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				letter-spacing: 0.9em;
 				height: 300px;
 			}
+			.wedding-information,.traffic-information{				
+				padding:10px;
+				text-align: left;	
+				line-height: 1.8;
+			}
+			.wedding-note{
+				font-size: 14px;
+			}
+
+			@media (max-width: 768px) {
+			.wedding-address,
+			.dinner-address {
+				padding-top: 60px;
+				padding-bottom: 60px;
+				text-align: center;
+			}
+
+			.wedding-address h3,
+			.sheet h3 {
+				font-size: 24px;
+				letter-spacing: 0.3em;
+				text-indent: 0.3em;
+				height: auto;
+				line-height: 1.5;
+			}
+
+			.wedding-address p,
+			.dinner-address p {
+				font-size: 14px;
+				padding: 0 1rem;
+			}
+
+			.together-see p{						
+				text-align: center;	
+				font-size: 25px;
+				letter-spacing: 1.0em;
+				height: 150px;
+				padding-top: 80px;
+			}
 			.wedding-information,.traffic-information{
 				padding:10px;
 				text-align: left;	
 				line-height: 1.8;
 			}
+			.wedding-note{
+				font-size: 8px;
+			}
+		}
+
+
+			
 			@keyframes scroll-marquee {
 				0% {
 					transform: translateX(0);

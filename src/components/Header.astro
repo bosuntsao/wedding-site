@@ -52,6 +52,17 @@ import { SITE_TITLE } from '../consts';
 	.social-links a {
 		display: flex;
 	}
+	@media (max-width: 768px) {
+		header {
+			height: 60px; /* 壓縮高度 */
+			padding: 0 0.5em; /* 縮小左右間距 */
+			flex-direction: column; /* 如果有 Logo 和選單，可能要垂直排 */
+			align-items: flex-start; /* 讓內容靠左 */
+			justify-content: center; /* 垂直置中 */
+		}
+	}
+
+
 	@media (max-width: 720px) {
 		.social-links {
 			display: none;
