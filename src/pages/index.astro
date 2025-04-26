@@ -827,9 +827,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				height: auto;
 				aspect-ratio: 2 / 3; /* 控制比例 */
 				background-size: cover;
-			background-position: center;
-			
-				
+				background-position: center;
 			}
 			.relation-label .m {
 				width: 120%;
@@ -848,6 +846,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				background-position: center;
 			}
 		}
+		
+
         .relation-label span {
             margin-top: 5px;
             font-size: 16px;
@@ -885,6 +885,62 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				background-color: #FFC107; /* 滑鼠懸停變深色 */
 				color: #ffffff;
 			}
+
+			@media (max-width: 720px) {
+			.relation-selection{
+				gap: 24px;
+			}
+			.relation-label {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 100%;			
+			}
+
+			.relation-label .m,
+			.relation-label .w,
+			.relation-label .both {
+				width: 120%;
+				max-width: 300px;
+				height: auto;
+				aspect-ratio: 2 / 3; /* 控制比例 */
+				background-size: cover;
+				background-position: center;
+			}
+			.relation-label .m {
+				width: 120%;
+				background-size: 200%;
+				background-position:98% 50%;
+			}
+
+			.relation-label .w {
+				width: 120%;
+				background-size: 200%;
+				background-position: 6% 50%;
+			}
+
+			.relation-label .both {
+				background-size: cover;
+				background-position: center;
+			}
+
+			.relation-label span {
+            margin-top: 5px;
+            font-size: 14px;
+            font-weight: bold;
+        	}
+
+			.relation-label:hover .overlay {
+				opacity: 1;
+				transform: scale(1.1);
+				transform-origin: center;
+			}
+
+			.relation-label:hover img {
+				transform: scale(1.5);
+				transform-origin: center;
+			}
+		}
 			
 			/* 回到頂部按鈕樣式 */
 			.scroll-to-top {
@@ -965,6 +1021,23 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				color: white;
 				text-decoration: none;
 				font-size: 0.7em;
+				border-radius: 14px;
+				}
+			}
+			@media (max-width: 720px) {
+				.map-container {
+				padding-bottom:18px;				
+				}			
+				.map-link {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.9rem;
+				margin-top: 1rem;				
+				padding: 0.4rem 1rem;
+				background-color: var(--accent);
+				color: white;
+				text-decoration: none;
+				font-size: 0.5em;
 				border-radius: 14px;
 				}
 			}
@@ -1062,8 +1135,16 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				font-size: 8px;
 			}
 		}
+		@media (max-width: 720px){
+			.together-see p{	
+				font-size: 22px;
+				padding-top: 60px;
+			}
 
-
+			.main-container{
+				padding: 0 1rem;
+			}
+		}
 			
 			@keyframes scroll-marquee {
 				0% {
