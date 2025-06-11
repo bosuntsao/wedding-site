@@ -279,8 +279,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			<div class="wedding-address">
 			<h3>〈 線上參與 〉</h3>
 			<p>雖然無法見面，但誠摯地邀請您在線上一同分享我們的喜悅~！</p>
-			<p>直播連結：<a href="https://youtube.com/live/Sv0T3ktbQnc" target="_blank">https://youtube.com/live/Sv0T3ktbQnc</a></p>
-
+			<p>婚禮直播連結：<a href="https://youtube.com/live/Sv0T3ktbQnc" target="_blank">點我觀看</a></p>
+			
 			</div>
 			
 			<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
@@ -1065,16 +1065,21 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				border-radius: 0px;
 				object-fit: cover;
 			}
-			.wedding-address,.wedding-address a,.dinner-address{
+			.wedding-address,.dinner-address{
 				font-family: 'Noto Serif SC', serif;
 				font-weight: bold;
 				color: #FFC107;
 				padding-top:40px;
-				padding-bottom:140px;				
+				padding-bottom:140px;		
+			}
+			.wedding-address a{
+				font-family: 'Noto Serif SC', serif;
+				font-weight: bold;
+				color: #FFC107;
 			}
 			.wedding-address p,.dinner-address p{
 				font-size:18px;
-				color: #3b3b3b;
+				color: #3b3b3b;				
 			}
 			.wedding-address h3,.sheet h3{
 				height:100px;
@@ -1102,9 +1107,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			@media (max-width: 768px) {
 			.wedding-address,
 			.dinner-address {
-				padding-top: 60px;
-				padding-bottom: 60px;
+				padding:10px;
 				text-align: center;
+				
 			}
 
 			.wedding-address h3,
@@ -1119,7 +1124,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			.wedding-address p,
 			.dinner-address p {
 				font-size: 14px;
-				padding: 0 1rem;
+				
 			}
 
 			.together-see p{						
